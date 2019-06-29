@@ -1,0 +1,10 @@
+<h1>There are {{count}} words in your text!</h1>
+<a href="{% url 'about' %}">About this app.</a><br />
+<a href="{% url 'home' %}">Try again</a>
+<h2>Full Text</h2>
+{{fulltext}}
+
+<h2>Word count</h2>
+{% for word, counter in sortedwords %}
+{{ word }} : {{ counter }}<br />
+{% endfor%}
